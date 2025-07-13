@@ -1,0 +1,251 @@
+header {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1em;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  min-height: 100vh;
+}
+
+#geral {
+  padding-top: 60px;
+  width: 50%;
+  margin: 0 auto;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1em;
+}
+
+fieldset {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: #f9f9f9;
+}
+
+.input-group {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.input-group input,
+.input-group select {
+  width: calc(100% - 16px);
+  padding: 8px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+.input-group input[type="radio"] {
+  margin-right: 6px;
+}
+
+.button-container input[type="submit"] {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.button-container input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+.input-sexo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.input-sexo label {
+  margin-right: 10;
+  background-color: #f8f9fa;
+  padding: 8px 12px;
+  border-radius: 20px;
+  margin: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.input-sexo label:hover {
+  background-color: #e9ecef;
+  border-color: #4caf50;
+}
+
+.input-sexo input[type="radio"]:checked + span,
+.input-sexo label:has(input[type="radio"]:checked) {
+  background-color: #4caf50;
+  color: white;
+  border-color: #4caf50;
+}
+
+form {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+fieldset legend {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+label {
+  font-weight: bold;
+  color: #333;
+}
+
+small {
+  color: #666;
+  font-size: 12px;
+  display: block;
+  margin-top: 3px;
+}
+
+input[required]:invalid,
+select[required]:invalid {
+  border: 2px solid #ff6b6b;
+  background-color: #ffe6e6;
+  box-shadow: 0 0 5px rgba(255, 107, 107, 0.3);
+}
+
+input[required]:invalid:focus,
+select[required]:invalid:focus {
+  outline: none;
+  border-color: #ff4757;
+  box-shadow: 0 0 8px rgba(255, 107, 107, 0.5);
+}
+
+input[required]:valid,
+select[required]:valid {
+  border: 2px solid #4caf50;
+  background-color: #f0fff0;
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.3);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border: 2px solid #2196f3;
+  background-color: #f0f8ff;
+  box-shadow: 0 0 8px rgba(33, 150, 243, 0.4);
+  transform: scale(1.02);
+  transition: all 0.3s ease;
+}
+
+input,
+select,
+textarea {
+  transition: all 0.3s ease;
+}
+
+input[required] + small::after,
+select[required] + small::after {
+  content: " (Obrigatório)";
+  color: #ff6b6b;
+  font-weight: bold;
+}
+
+.error-message {
+  color: #ff4757;
+  font-size: 12px;
+  margin-top: 5px;
+  display: none;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  width: auto !important;
+  margin-right: 8px;
+  transform: scale(1.2);
+}
+
+input[type="checkbox"]:focus,
+input[type="radio"]:focus {
+  transform: scale(1.4);
+  outline: 2px solid #2196f3;
+  outline-offset: 2px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+input:hover:not(:focus),
+select:hover:not(:focus) {
+  border-color: #999;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+}
+
+.button-container {
+  text-align: center;
+  margin-top: 30px;
+  padding: 20px;
+}
+
+.button-container input[type="submit"]:focus {
+  outline: 3px solid #2196f3;
+  outline-offset: 2px;
+}
+
+@media (max-width: 768px) {
+  #geral {
+    width: 90%;
+    padding-top: 20px;
+  }
+
+  fieldset {
+    padding: 15px;
+  }
+
+  .input-sexo {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .input-sexo label {
+    margin-bottom: 10px;
+  }
+}
